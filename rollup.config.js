@@ -8,6 +8,8 @@ export default {
   output: {
     file: 'bin/index.js',
     format: 'cjs',
+    banner: '#!/usr/bin/env node\n',
   },
+  
   plugins: [typescript(), json(), resolve(), commonjs()],
 };

@@ -1,8 +1,14 @@
 {
   "name": "ftp-publish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "ftp-publish": "./bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "build": "rollup --config rollup.config.js",
     "upload": "node ./bin/index.js upload --path ./bin --host 115.159.126.123 --port 22 --user administrator --password BudaW/9ZdasxghVS465VWA== --ftppath customer-camp"
