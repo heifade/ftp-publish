@@ -32,11 +32,12 @@ export async function upload(pars: UploadProps) {
     await client.clearWorkingDir();
     await client.uploadDir(pars.sourcePath);
 
-    client.trackProgress();
+    // client.trackProgress();
 
     singleLineLog(chalk.green('上传完成!') + '\n');
   } catch (err) {
     singleLineLog(chalk.red('上传失败！', err) + '\n');
+    throw err;
   }
 
   await client.close();
